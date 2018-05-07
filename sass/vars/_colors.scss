@@ -1,0 +1,125 @@
+/*--------------------------------------------------------------
+# Default Bootstrap Colors
+--------------------------------------------------------------*/
+// Color system
+
+$white:    #fff; 
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057; 
+$gray-800: #343a40; 
+$gray-900: #212529; 
+$black:    #000;
+
+$grays: ();
+$grays: map-merge((
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+), $grays);
+
+$blue:    #3369d6;
+$indigo:  #5603ad;
+$purple:  #801096;
+$pink:    #e36397;
+$red:     #ff0033;
+$orange:  #ff3b00;
+$yellow:  #ffd600;
+$green:   #00c759;
+$teal:    #73e9ef;
+$cyan:    #2bffc6;
+
+$colors: ();
+$colors: map-merge((
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "light":      $gray-400,
+  "lighter":    $gray-200,
+  "gray-dark":  $gray-800
+), $colors);
+
+$primary:       #288cff;
+$secondary:     #e8f2ff;
+$tertiary:      #192b3f;
+$success:       $green;
+$info:          $teal;
+$warning:       $orange;
+$danger:        $red;
+$light:         $gray-500;
+$dark:          $gray-800;
+
+$facebook:      #3b5999;
+$twitter:       #1da1f2;
+$google-plus:   #dd4b39; 
+$instagram:     #e4405f;
+$pinterest:     #bd081c;
+$youtube:       #cd201f;
+$slack:         #3aaf85;
+$dribbble:      #ea4c89;
+
+
+$theme-colors: ();
+$theme-colors: map-merge((
+  "primary":      $primary,
+  "secondary":    $secondary,
+  "tertiary":     $tertiary,
+  "success":      $success,
+  "info":         $info,
+  "warning":      $warning,
+  "danger":       $danger,
+  "light":        $light,
+  "dark":         $dark
+), $theme-colors);
+
+$brand-colors: ();
+$brand-colors: map-merge((
+  "facebook":     $facebook,
+  "twitter":      $twitter,
+  "google-plus":  $google-plus,
+  "instagram":    $instagram,
+  "pinterest":    $pinterest,
+  "youtube":      $youtube,
+  "slack":        $slack,
+  "dribbble":     $dribbble
+), $theme-colors);
+
+
+// Action colors
+
+$favorite-color: $yellow;
+$like-color: $blue;
+$love-color: $red;
+
+
+// Body
+
+$body-bg: $white;
+$body-color: $gray-700;
+
+
+// Links
+
+$link-color:                $primary;
+$link-decoration:           none;
+$link-hover-color:          darken($link-color, 15%);
+$link-hover-decoration:     unone;
