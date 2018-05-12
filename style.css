@@ -10730,11 +10730,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
-.site-header {
-  margin-bottom: 3em; }
-
 .page-template-about .site-header,
-.page-template-home .site-header {
+.page-template-home .site-header,
+.page-template-contact .site-header,
+.page-template-default .site-header {
   margin-bottom: 0; }
 
 /*--------------------------------------------------------------

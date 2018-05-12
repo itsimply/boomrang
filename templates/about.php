@@ -12,7 +12,7 @@
  * @package BoomRang
  */
 
-get_header('transparent'); ?>
+get_header(); ?>
 
 <?php 
 	 // Gets the uploaded featured image
@@ -21,7 +21,7 @@ get_header('transparent'); ?>
   	$bg = (!empty( $featured_img ) ? "background-image: url('". $featured_img[0] ."');" : '');
 ?>
 
- <section class="spotlight parallax bg-cover bg-size--cover"  style="<?php echo $bg; ?>">
+    <section class="spotlight parallax bg-cover bg-size--cover"  style="<?php echo $bg; ?>">
         <span class="mask bg-tertiary alpha-7"></span>
         <div class="spotlight-holder py-lg pt-lg-xl">
           <div class="container d-flex align-items-center no-padding">
@@ -53,7 +53,7 @@ get_header('transparent'); ?>
           <div class="row align-items-center cols-xs-space cols-sm-space cols-md-space">
             <div class="col-lg-6 order-lg-2 ml-lg-auto">
               <div class="block block-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/device-1.png" class="img-fluid img-center">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/prv/device-1.png" class="img-fluid img-center">
               </div>
             </div>
             <div class="col-lg-5 order-lg-1">
@@ -210,7 +210,7 @@ get_header('transparent'); ?>
       <div class="container">
         <div class="row cols-xs-space cols-sm-space align-items-center">
           <div class="col-md-6">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/img-1-1000x900.jpg" class="img-center img-fluid rounded z-depth-3">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/prv/img-1-1000x900.jpg" class="img-center img-fluid rounded z-depth-3">
           </div>
           <div class="col-md-6 col-lg-5 ml-lg-auto">
             <div class="pr-md-4">

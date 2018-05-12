@@ -12,7 +12,7 @@
  * @package BoomRang
  */
 
-get_header('transparent'); ?>
+get_header(); ?>
 
 <?php 
 	 // Gets the uploaded featured image
