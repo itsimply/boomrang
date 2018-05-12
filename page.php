@@ -25,6 +25,7 @@ get_header('transparent'); ?>
   <?php
     // Grab the metadata from the database
     $herotitle = get_post_meta( get_the_ID(), '_boomrang_hero_title', true );
+    $herosubtitle = get_post_meta( get_the_ID(), '_boomrang_hero_subtitle', true );
   ?>
 
 
@@ -37,20 +38,15 @@ get_header('transparent'); ?>
                 <div class="col-lg-7">
                   <div class="text-center mt-5">
                  
-              
-                     <?php if (($herotitle) != '') {
-            echo '<h1 class="entry-title heading h1 text-white">';
-            echo wp_kses_post( $herotitle );
-            echo '</h1>';
-          } else { ?>
-          <?php the_title( '<h1 class="entry-title heading h1 text-white">', '</h1>' ); ?>
-          <?php } ?>
-
-
-
-                    
-                    <p class="lead lh-180 text-white mt-3">
-                      We put all the experience and know-how in Boomerang so we can offer you the best product we have ever built.
+              <?php if (($herotitle) != '') {
+                    echo '<h1 class="entry-title heading h1 text-white">';
+                    echo wp_kses_post( $herotitle );
+                    echo '</h1>';
+                } else { ?>
+              <?php the_title( '<h1 class="entry-title heading h1 text-white">', '</h1>' ); ?>
+              <?php } ?>                    
+                   <p class="lead lh-180 text-white mt-3">
+                      <?php echo wp_kses_post( $herosubtitle ); ?>
                     </p>
                   </div>
                 </div>
@@ -59,9 +55,6 @@ get_header('transparent'); ?>
           </div>
         </div>
       </section>
-
-
-     
 
 
 	<div class="container">

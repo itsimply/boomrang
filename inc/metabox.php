@@ -10,9 +10,9 @@ function cmb2_boomrang_metaboxes() {
 	$prefix = '_boomrang_';
 
 	/**
-	 * Initiate the metabox
+	 * Initiate the metabox about.php
 	 */
-	$cmb = new_cmb2_box( array(
+	$cmb_about = new_cmb2_box( array(
 		'id'            => 'test_metabox',
 		'title'         => __( 'Test Metabox', 'boomrang' ),
 		'object_types'  => array( 'page', ), // Post type
@@ -24,16 +24,17 @@ function cmb2_boomrang_metaboxes() {
 		// 'closed'     => true, // Keep the metabox closed by default
 	) );
 
-	// Textarea for left column
-	$cmb->add_field( array(
-		'name'       => __( 'Left Column', 'boomrang' ),
-		'desc'       => __( 'Content for left column', 'boomrang' ),
-		'id'         => $prefix . 'left',
-		'type'       => 'textarea',
+	// Hero Section Full Page - About Page
+	$cmb_about->add_field( array(
+		'name'       => __( 'Make Hero Section Full Page', 'boomrang' ),
+		'desc'       => __( 'Check to make hero fullpage', 'boomrang' ),
+		'id'         => $prefix . 'fullpage',
+		'type'       => 'checkbox',
 	) );
 
+
 	// Textarea for right column
-	$cmb->add_field( array(
+	$cmb_about->add_field( array(
 		'name'       => __( 'Right Column', 'boomrang' ),
 		'desc'       => __( 'Content for left column', 'boomrang' ),
 		'id'         => $prefix . 'right',
@@ -55,12 +56,24 @@ function cmb2_boomrang_metaboxes() {
 		// 'closed'     => true, // Keep the metabox closed by default
 	) );
 
-	// Regular text field
+	// Title for hero
 	$cmb->add_field( array(
 		'name'       => __( 'Title', 'boomrang' ),
 		'desc'       => __( 'Title that show in hero', 'boomrang' ),
 		'id'         => $prefix . 'hero_title',
 		'type'       => 'text',
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
+	) );
+
+		// Title for hero
+	$cmb->add_field( array(
+		'name'       => __( 'SubTitle', 'boomrang' ),
+		'desc'       => __( 'SubTitle that show in hero', 'boomrang' ),
+		'id'         => $prefix . 'hero_subtitle',
+		'type'       => 'textarea',
 		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
 		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
 		// 'on_front'        => false, // Optionally designate a field to wp-admin only

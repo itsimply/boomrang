@@ -10,8 +10,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('col-lg-4'); ?>>
- <div class="card border-0">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/img-1-800x600.jpg" class="img-fluid img-center rounded z-depth-2">
+
+              <?php if ( has_post_thumbnail() ) : ?>
+						<div class="card border-0">
+					    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+					      <?php the_post_thumbnail('medium', array('class' => 'img-fluid img-center rounded box-shadow-5')); ?>
+					    </a>
+					</div><!--  .card -->
+				<?php endif; ?>
+				
+
               <div class="pt-4">
 
                 <span class="text-muted"><?php echo get_the_date(); ?></span>
@@ -20,8 +28,12 @@
                  <?php the_excerpt(); ?>
                 </p>
               </div>
-            </div>
+          
 </article><!-- #post-## -->
+
+
+
+				
 
 
 

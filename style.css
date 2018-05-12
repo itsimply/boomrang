@@ -10736,6 +10736,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .page-template-default .site-header {
   margin-bottom: 0; }
 
+.single-post .site-header {
+  margin-bottom: 3em; }
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
