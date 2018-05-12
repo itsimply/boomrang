@@ -243,6 +243,12 @@ get_header('transparent'); ?>
         </div>
       </div>
     </section>
+
+
+     
+
+
+
     <section class="slice slice-lg">
       <div class="container">
         <div class="mb-5 text-center">
@@ -252,42 +258,32 @@ get_header('transparent'); ?>
           </div>
         </div>
         <div class="row cols-md-space cols-sm-space cols-xs-space">
-          <div class="col-lg-4">
-            <div class="card border-0">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/img-1-800x600.jpg" class="img-fluid img-center rounded z-depth-2">
-              <div class="pt-4">
-                <span class="text-muted">Oct 15, 2018</span>
-                <a href="#" class="heading h4 d-block mt-1">Listen to the nature</a>
-                <p class="mt-3">
-                  When we strive to become better than we are, everything around us becomes better, too.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card border-0">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/img-2-800x600.jpg" class="img-fluid img-center rounded z-depth-2">
-              <div class="pt-4">
-                <span class="text-muted">Oct 15, 2018</span>
-                <a href="#" class="heading h4 d-block mt-1">Listen to the nature</a>
-                <p class="mt-3">
-                  When we strive to become better than we are, everything around us becomes better, too.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card border-0">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/img-3-800x600.jpg" class="img-fluid img-center rounded z-depth-2">
-              <div class="pt-4">
-                <span class="text-muted">Oct 15, 2018</span>
-                <a href="#" class="heading h4 d-block mt-1">Listen to the nature</a>
-                <p class="mt-3">
-                  When we strive to become better than we are, everything around us becomes better, too.
-                </p>
-              </div>
-            </div>
-          </div>
+         
+         
+           <?php 
+              // the query
+              $args = array('posts_per_page' => '3');
+              $the_query = new WP_Query( $args ); ?>
+
+            <?php if ( $the_query->have_posts() ) : ?>
+
+          <!-- the loop -->
+
+          <?php while ( $the_query->have_posts() ) : $the_query->the_post();
+
+           get_template_part( 'template-parts/content', 'recentpost' );
+
+            endwhile; ?>
+              <!-- end of the loop -->
+            <?php wp_reset_postdata(); ?>
+
+          <?php else : ?>
+            <p><?php __('No News'); ?></p>
+          <?php endif; ?>
+
+
+
+
         </div>
         <div class="text-center mt-5">
           <a href="#" class="text-uppercase">

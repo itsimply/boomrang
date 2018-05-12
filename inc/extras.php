@@ -59,3 +59,12 @@ function boomrang_modify_read_more_link() {
     );
 }
 add_filter( 'the_content_more_link', 'boomrang_modify_read_more_link' );
+
+/**
+ * Customize the length of excerpt
+**/
+
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
