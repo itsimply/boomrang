@@ -122,7 +122,7 @@ require get_template_directory() . '/plugin-activation/install-plugins.php';
 /**
  * Metabox
  */
-// require get_template_directory() . '/inc/metabox.php';
+require get_template_directory() . '/inc/metabox.php';
 
 // /**
 //  * Custom Post Type Settings

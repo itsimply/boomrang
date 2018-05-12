@@ -17,10 +17,6 @@
 		</div><!--  .post-thumbnail -->
 	<?php endif; */  ?>
 
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title heading h1 mb-4">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
 	<div class="entry-content">
 		<?php
 			the_content();

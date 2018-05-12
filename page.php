@@ -22,6 +22,12 @@ get_header('transparent'); ?>
   	$bg = (!empty( $featured_img ) ? "background-image: url('". $featured_img[0] ."');" : '');
 ?>
 
+  <?php
+    // Grab the metadata from the database
+    $herotitle = get_post_meta( get_the_ID(), '_boomrang_hero_title', true );
+  ?>
+
+
     <section class="spotlight parallax bg-cover bg-size--cover"  style="<?php echo $bg; ?>">
         <span class="mask bg-tertiary alpha-7"></span>
         <div class="spotlight-holder py-lg pt-lg-xl">
@@ -30,9 +36,19 @@ get_header('transparent'); ?>
               <div class="row cols-xs-space align-items-center text-center text-md-left justify-content-center">
                 <div class="col-lg-7">
                   <div class="text-center mt-5">
-                    <h1 class="heading h1 text-white">
-                      Hi, nice to meet you!
-                    </h1>
+                 
+              
+                     <?php if (($herotitle) != '') {
+            echo '<h1 class="entry-title heading h1 text-white">';
+            echo wp_kses_post( $herotitle );
+            echo '</h1>';
+          } else { ?>
+          <?php the_title( '<h1 class="entry-title heading h1 text-white">', '</h1>' ); ?>
+          <?php } ?>
+
+
+
+                    
                     <p class="lead lh-180 text-white mt-3">
                       We put all the experience and know-how in Boomerang so we can offer you the best product we have ever built.
                     </p>
@@ -44,6 +60,8 @@ get_header('transparent'); ?>
         </div>
       </section>
 
+
+     
 
 
 	<div class="container">
