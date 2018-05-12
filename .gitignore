@@ -2,3 +2,4 @@
 *.log
 node_modules
 imageoptim-cli
+plugin-activation

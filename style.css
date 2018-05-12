@@ -1,8 +1,8 @@
 /*
 Theme Name: BoomRang
-Theme URI: http://strappress.com
-Author: Brad Williams
-Author URI: http://braginteractive.com
+Theme URI: http://github.com/itsimply/boomrang
+Author: Lukasz Fedor
+Author URI: http://github.com/itsimply/boomrang
 Description: Bootstrap 4 WordPress Theme
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -10551,6 +10551,60 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -ms-flex: 0 0 33.33333333%;
           flex: 0 0 33.33333333%;
       max-width: 33.33333333%; } }
+
+/*--------------------------------------------------------------
+# Full Width Content
+--------------------------------------------------------------*/
+.content-area-full-width {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  max-width: 100%; }
+
+/*--------------------------------------------------------------
+# Content on Right with Sidebar on left
+--------------------------------------------------------------*/
+.content-area-right {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px; }
+  @media (min-width: 576px) {
+    .content-area-right {
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+      max-width: 100%; } }
+  @media (min-width: 768px) {
+    .content-area-right {
+      -ms-flex: 0 0 66.66666667%;
+          flex: 0 0 66.66666667%;
+      max-width: 66.66666667%;
+      -ms-flex-order: 12;
+          order: 12; } }
+
+.widget-area-left {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px; }
+  @media (min-width: 576px) {
+    .widget-area-left {
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+      max-width: 100%; } }
+  @media (min-width: 768px) {
+    .widget-area-left {
+      -ms-flex: 0 0 33.33333333%;
+          flex: 0 0 33.33333333%;
+      max-width: 33.33333333%;
+      -ms-flex-order: 1;
+          order: 1; } }
 
 /*--------------------------------------------------------------
 ## Templates About

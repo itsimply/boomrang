@@ -286,7 +286,7 @@ get_header('transparent'); ?>
 
         </div>
         <div class="text-center mt-5">
-          <a href="#" class="text-uppercase">
+          <a href="/blog" class="text-uppercase">
             All posts
             <i class="fas fa-arrow-right ml-2"></i>
           </a>
