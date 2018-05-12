@@ -10606,6 +10606,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -ms-flex-order: 1;
           order: 1; } }
 
+.content-area,
+.widget-area,
+.content-area-right,
+.widget-area-left,
+.content-area-full-width {
+  margin-top: 3rem; }
+
 /*--------------------------------------------------------------
 ## Templates About
 --------------------------------------------------------------*/
@@ -10702,6 +10709,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       flex: 0 0 100%;
   max-width: 100%; }
 
+/* Pagination */
+@media screen and (max-width: 575px) {
+  .ft-wpbs .page-link {
+    font-size: .7rem;
+    padding: .3rem .45rem; } }
+
 /*--------------------------------------------------------------
 ## Widgets
 --------------------------------------------------------------*/
@@ -10738,6 +10751,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .single-post .site-header {
   margin-bottom: 3em; }
+
+.navbar-highlights {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.375rem;
+  padding: 0; }
 
 /*--------------------------------------------------------------
 ## Footer

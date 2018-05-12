@@ -7,7 +7,7 @@
  * @package BoomRang
  */
 
-get_header(); ?>
+get_header('blue'); ?>
 
 	<div class="container">
 		<div class="row">

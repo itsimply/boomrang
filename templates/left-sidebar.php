@@ -24,12 +24,16 @@ get_header(); ?>
             <div class="col">
               <div class="row cols-xs-space align-items-center text-center text-md-left justify-content-center">
                 <div class="col-lg-7">
-                  <div class="text-center mt-5">
-                    <h1 class="heading h1 text-white">
-                      Hi, nice to meet you!
-                    </h1>
+                     <div class="text-center mt-5">
+                    <?php if (($herotitle) != '') {
+                      echo '<h1 class="entry-title heading h1 text-white">';
+                      echo wp_kses_post( $herotitle );
+                      echo '</h1>';
+                    } else { ?>
+                    <?php the_title( '<h1 class="entry-title heading h1 text-white">', '</h1>' ); ?>
+                    <?php } ?>        
                     <p class="lead lh-180 text-white mt-3">
-                      We put all the experience and know-how in Boomerang so we can offer you the best product we have ever built.
+                     <?php echo wp_kses_post( $herosubtitle ); ?>
                     </p>
                   </div>
                 </div>

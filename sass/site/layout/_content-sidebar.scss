@@ -27,6 +27,7 @@
 }
 
 
+
 /*--------------------------------------------------------------
 # Full Width Content
 --------------------------------------------------------------*/
@@ -65,4 +66,12 @@
 	}  
 }
 
+.content-area,
+.widget-area,
+.content-area-right,
+.widget-area-left,
+.content-area-full-width
+ {
+	margin-top: 3rem;
+}
 
