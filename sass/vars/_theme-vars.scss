@@ -50,9 +50,9 @@ $border-radius-xl:            .375rem;
 $border-radius-lg:            .375rem;
 $border-radius-sm:            .25rem;
 
-$component-active-color:        $white;
-$component-active-bg:           $primary;
-$component-active-border-color: $primary;
+$component-active-color:        $gray-700;
+$component-active-bg:           $primary; 
+$component-active-border-color: $gray-600;
 
 $component-hover-color:        $gray-300;
 $component-hover-bg:           $gray-300;
@@ -339,13 +339,13 @@ $nav-link-color:                    $gray-700;
 $nav-link-disabled-color:           $gray-600;
 
 $nav-pills-border-radius:           $border-radius;
-$nav-pills-link-active-color:       $component-active-color;
+$nav-pills-link-active-color:       $white;
 $nav-pills-link-active-bg:          $component-active-bg;
 
 $nav-pills-padding-y : .75rem;
 $nav-pills-padding-x: .75rem;
-$nav-pills-border-width: .25rem;
-$nav-pills-border-color : $component-active-bg;;
+$nav-pills-border-width: .05rem;
+$nav-pills-border-color : $component-active-bg;
 $nav-pills-link-color : $component-active-color;
 $nav-pills-link-hover-color: $component-active-bg;
 

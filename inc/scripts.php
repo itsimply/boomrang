@@ -5,6 +5,8 @@
 function boomrang_scripts() {
 	wp_enqueue_style( 'boomrang-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.0' );
 
+	wp_enqueue_style( 'google-body', '//fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700');
+
 	wp_enqueue_script( 'boomrang-js', get_template_directory_uri() . '/js/dist/scripts.min.js', array('jquery'), ' ', true );
 
 	wp_enqueue_script( 'boomrang-custom-js', get_template_directory_uri() . '/js/src/site.js', array('jquery'), ' ', true );

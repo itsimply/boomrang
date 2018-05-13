@@ -103,6 +103,11 @@ require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * Comments Callback.
+ */
+require get_template_directory() . '/inc/comments-callback.php';
+
+/**
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';

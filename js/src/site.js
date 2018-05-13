@@ -30,7 +30,28 @@ jQuery(document).ready(function($){
             }
         })
     }
-});
+
+    // Tooltips 
+
+     $('[data-toggle="tooltip"]').tooltip();
+
+     // Popover
+
+      $('[data-toggle="popover"]').each(function() {
+        var popoverClass = '';
+        if($(this).data('color')) {
+            popoverClass = 'popover-'+$(this).data('color');
+        }
+        $(this).popover({
+            trigger: 'focus',
+            template: '<div class="popover '+ popoverClass +'" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+        })
+    });
+    
+
+
+
+    });
 
 
 

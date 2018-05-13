@@ -25,7 +25,7 @@
 	<header id="masthead" class="site-header" role="banner">
 	    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 	    	<div class="container">
-			   <<?php 
+			   <?php 
 	    		if ( has_custom_logo() ) {
 				    the_custom_logo();
 				} else { ?>
