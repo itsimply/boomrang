@@ -1,0 +1,21 @@
+// Full widht block button only on mobile
+
+ .btn-block-xs { 
+ 	@include media-breakpoint-down(xs) {
+		display: block;
+  		width: 100%;
+
+		  // Vertically space out multiple block buttons
+		  + .btn-block-xs {
+		    margin-top: $btn-block-spacing-y;
+		  }
+		 	}
+
+		 	input[type="submit"],
+			input[type="reset"],
+			input[type="button"] {
+  			&.btn-block-xs {
+   			 width: 100%;
+  		}
+		}
+	}

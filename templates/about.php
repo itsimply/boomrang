@@ -54,8 +54,8 @@ get_header(); ?>
                      <?php echo wp_kses_post( $herosubtitle ); ?>
                     </p>
                     <div class="mt-5">
-                      <a href="#" class="btn btn-primary mr-3">Our services</a>
-                      <a href="#" class="btn btn-secondary">Meet the team</a>
+                      <a href="#" class="btn btn-primary mr-3 btn-block-xs">Our services</a>
+                      <a href="#" class="btn btn-secondary btn-block-xs">Meet the team</a>
                     </div>
                   </div>
                 </div>

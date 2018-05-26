@@ -10616,6 +10616,18 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 /*--------------------------------------------------------------
 ## Templates About
 --------------------------------------------------------------*/
+@media (max-width: 575.98px) {
+  .btn-block-xs {
+    display: block;
+    width: 100%; }
+    .btn-block-xs + .btn-block-xs {
+      margin-top: 0.5rem; } }
+
+.btn-block-xs input[type="submit"].btn-block-xs,
+.btn-block-xs input[type="reset"].btn-block-xs,
+.btn-block-xs input[type="button"].btn-block-xs {
+  width: 100%; }
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/

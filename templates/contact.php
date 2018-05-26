@@ -52,7 +52,7 @@ if(isset($_POST['submitted'])) {
  
 }
  
-get_header('transparentlight'); ?>
+get_header('blue'); ?>
  
 <?php
  ?>
