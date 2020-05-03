@@ -9,11 +9,19 @@ var gulp = require( 'gulp' ),
   rename = require( 'gulp-rename' ),
   notify = require( 'gulp-notify' ),
   include = require( 'gulp-include' ),
+  purify = require('gulp-purifycss'),
+  gps = require('psi'),
+  ngrok = require('ngrok'),
+  sequence = require('run-sequence'),
   sass = require( 'gulp-sass' ),
-  imageoptim = require('gulp-imageoptim'),
+  imagemin = require('gulp-imagemin'),
+  pngcrush = require('imagemin-pngcrush');
+  imageminJpegoptim = require('imagemin-jpegoptim'),
+  imageminOptipng = require('imagemin-optipng'),
+  imageminJpegRecompress = require('imagemin-jpeg-recompress'),
   browserSync = require('browser-sync').create(),
   critical = require('critical'),
-  zip = require('gulp-zip');
+  zip = require('gulp-zip'),
   gcmq = require('gulp-group-css-media-queries');
 
 var config = {
@@ -56,7 +64,7 @@ gulp.task('zip', function () {
    '!bower_components',
    '!node_modules',
   ], {base: "."})
-  .pipe(zip('strappress.zip'))
+  .pipe(zip('boomrang.zip'))
   .pipe(gulp.dest('.'));
 });
  
@@ -133,6 +141,19 @@ gulp.task('sass-min', function() {
         .pipe(notify({ title: 'Sass', message: 'sass-min task complete' }));
 });
 
+
+// Remove unused CSS
+
+gulp.task('cleancss', function() {
+  return gulp.src('./style.css')
+    .pipe(purify(['./*.php', './templates/*.php', './template-parts/*.php', './inc/*.php', './js/dist/scripts.js'], 
+    {minify: true,
+    whitelist: ['tagcloud', 'icon svg']}))
+    .pipe(gulp.dest('./distcss/'));
+});
+
+
+
 // Group media queries. 
 
 gulp.task('mediaq', function () {
@@ -142,11 +163,68 @@ gulp.task('mediaq', function () {
 });
 
 // Optimize Images
-gulp.task('images', function() {
+// gulp.task('images', function() {
+//     return gulp.src('./images/**/*')
+//         .pipe(imageoptim.optimize({jpegmini: true}))
+//         .pipe(gulp.dest('./imagesoptim'))
+//         .pipe( notify({ message: 'Images task complete' }));
+// });
+
+gulp.task('images', function () {
     return gulp.src('./images/**/*')
-        .pipe(imageoptim.optimize({jpegmini: true}))
-        .pipe(gulp.dest('./images'))
-        .pipe( notify({ message: 'Images task complete' }));
+        .pipe(imagemin([
+      // imagemin.gifsicle(),
+      // imageminJpegoptim({
+      //   progressive: true,
+      //   max: 65
+      // }),
+        imageminJpegRecompress({
+        progressive: true,
+        loops:4,
+        min: 50,
+        max: 65,
+        quality:'medium' 
+      }),
+      imageminOptipng({
+        optimizationLevel: 8
+      }),
+      imagemin.svgo()
+    ]))
+        .pipe(gulp.dest('./imagesoptim2'))
+});
+
+// -----------------------------------------------------------------------------
+// Performance test: PageSpeed Insights
+//
+// Initializes a public tunnel so the PageSpeed service can access your local
+// site, then it tests the site. This task outputs the standard PageSpeed results.
+//
+// The task will output a standard exit code based on the result of the PSI test
+// results. 0 is success and any other number is a failure. To learn more about
+// bash-compatible exit status codes read this page:
+//
+// http://tldp.org/LDP/abs/html/exit-status.html
+// -----------------------------------------------------------------------------
+gulp.task('gps', function() {
+  // Set up a public tunnel so PageSpeed can see the local site.
+  return ngrok.connect(80, function (err_ngrok, url) {
+    log(c.cyan('ngrok'), '- serving your site from', c.yellow(url));
+
+    // Run PageSpeed once the tunnel is up.
+    gps.output(url, {
+      strategy: 'mobile',
+      threshold: 80
+    }, function (err_gps, data) {
+      // Log any potential errors and return a FAILURE.
+      if (err_gps) {
+        log(err_gps);
+        process.exit(1);
+      }
+
+      // Kill the ngrok tunnel and return SUCCESS.
+      process.exit(0);
+    });
+  });
 });
 
 // Generate & Inline Critical-path CSS

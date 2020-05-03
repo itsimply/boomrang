@@ -29,6 +29,7 @@ get_header(); ?>
   ?>
 
   <?php 
+  $fullpage = '';
   // Check if checkbox is on
   if ( get_post_meta( get_the_ID(), '_boomrang_fullpage', 1 ) ) : 
   $fullpage = 'data-spotlight="fullscreen"'; ?>
@@ -247,7 +248,7 @@ get_header(); ?>
         <div class="row align-items-center cols-xs-space cols-sm-space cols-md-space text-center text-lg-left">
           <div class="col-lg-7">
             <h1 class="heading h2 text-white strong-500">
-              Need more information about Boomerang UI Kit?
+              Need more information about Boomrang Wordpress Theme?
             </h1>
             <p class="lead text-white mb-0">Take up one idea. Let the brain, muscles, nerves, every part of your body, be full of that idea, and just leave every other idea alone.</p>
           </div>
@@ -280,7 +281,7 @@ get_header(); ?>
          
            <?php 
               // the query
-              $args = array('posts_per_page' => '3');
+              $args = array('posts_per_page' => '2');
               $the_query = new WP_Query( $args ); ?>
 
             <?php if ( $the_query->have_posts() ) : ?>
@@ -293,18 +294,20 @@ get_header(); ?>
 
             endwhile; ?>
               <!-- end of the loop -->
-            <?php wp_reset_postdata(); ?>
+            
 
           <?php else : ?>
-            <p><?php __('No News'); ?></p>
+          <p><?php _e( 'Sorry, no posts matched your criteria.', 'boomrang' ); ?></p>
           <?php endif; ?>
-
+          
+          <?php wp_reset_postdata(); ?>
 
 
 
         </div>
         <div class="text-center mt-5">
-          <a href="/blog" class="text-uppercase">
+          <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="text-uppercase">
+
             All posts
             <i class="fas fa-arrow-right ml-2"></i>
           </a>

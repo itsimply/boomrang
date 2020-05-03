@@ -29,6 +29,7 @@ get_header(); ?>
   ?>
 
   <?php 
+  $fullpage = '';
   // Check if checkbox is on
   if ( get_post_meta( get_the_ID(), '_boomrang_fullpage', 1 ) ) : 
   $fullpage = 'data-spotlight="fullscreen"'; ?>
@@ -36,7 +37,7 @@ get_header(); ?>
 
 
     <section class="spotlight parallax bg-cover bg-size--cover" <?php echo $fullpage; ?>  style="<?php echo $bg; ?>">
-        <span class="mask bg-tertiary alpha-7"></span>
+        <span class="mask bg-primary alpha-7"></span>
         <div class="spotlight-holder py-lg pt-lg-xl">
           <div class="container d-flex align-items-center no-padding">
             <div class="col">
@@ -44,19 +45,15 @@ get_header(); ?>
                 <div class="col-lg-7">
                   <div class="text-center mt-5">
                     <?php if (($herotitle) != '') {
-                      echo '<h1 class="entry-title heading h1 text-white">';
+                      echo '<h2 class="heading display-4 font-weight-400 text-white mt-5">';
                       echo wp_kses_post( $herotitle );
-                      echo '</h1>';
+                      echo '</h2>';
                     } else { ?>
-                    <?php the_title( '<h1 class="entry-title heading h1 text-white">', '</h1>' ); ?>
+                    <?php the_title( '<h2 class="heading display-4 font-weight-400 text-white mt-5">', '</h2>' ); ?>
                     <?php } ?>        
-                    <p class="lead lh-180 text-white mt-3">
+                    <p class="lead text-white mt-3 lh-180 c-white">
                      <?php echo wp_kses_post( $herosubtitle ); ?>
                     </p>
-                    <div class="mt-5">
-                      <a href="#" class="btn btn-primary mr-3">Our services</a>
-                      <a href="#" class="btn btn-secondary">Meet the team</a>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -65,29 +62,6 @@ get_header(); ?>
         </div>
       </section>
 
-
-       <section class="spotlight parallax bg-cover bg-size--cover" data-spotlight="fullscreen" style="background-image: url('assets/images/backgrounds/img-1.jpg')">
-        <span class="mask bg-primary alpha-7"></span>
-        <div class="spotlight-holder py-lg pt-lg-xl">
-          <div class="container d-flex align-items-center no-padding">
-            <div class="col">
-              <div class="row cols-xs-space align-items-center text-center text-md-left justify-content-center">
-                <div class="col-7">
-                  <div class="text-center mt-5">
-                    <img src="assets/images/brand/icon.png" style="width: 200px;" class="img-fluid animated" data-animation-in="jackInTheBox" data-animation-delay="1000">
-                    <h2 class="heading display-4 font-weight-400 text-white mt-5 animated" data-animation-in="fadeInUp" data-animation-delay="2000">
-                      <span class="font-weight-700">Boomerang</span> UI Kit
-                    </h2>
-                    <p class="lead text-white mt-3 lh-180 c-white animated" data-animation-in="fadeInUp" data-animation-delay="2500">
-                      Free HTML UI Kit based on the well known Bootstrap 4 Framework brought to you by <strong class="text-white">Webpixels</strong>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section class="slice slice-lg">
         <div class="container">
           <div class="row justify-content-center">

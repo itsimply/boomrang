@@ -14,7 +14,7 @@
               <?php if ( has_post_thumbnail() ) : ?>
 						<div class="card border-0">
 					    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-					      <?php the_post_thumbnail('medium', array('class' => 'img-fluid img-center rounded box-shadow-5')); ?>
+					      <?php the_post_thumbnail('', array('class' => 'img-fluid img-center rounded box-shadow-5')); ?>
 					    </a>
 					</div><!--  .card -->
 				<?php endif; ?>

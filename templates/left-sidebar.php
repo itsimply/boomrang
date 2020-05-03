@@ -17,6 +17,13 @@ get_header(); ?>
   	$bg = (!empty( $featured_img ) ? "background-image: url('". $featured_img[0] ."');" : '');
 ?>
 
+<?php
+    // Grab the metadata from the database
+    $herotitle = get_post_meta( get_the_ID(), '_boomrang_hero_title', true );
+    $herosubtitle = get_post_meta( get_the_ID(), '_boomrang_hero_subtitle', true );
+
+  ?>
+
     <section class="spotlight parallax bg-cover bg-size--cover"  style="<?php echo $bg; ?>">
         <span class="mask bg-tertiary alpha-7"></span>
         <div class="spotlight-holder py-lg pt-lg-xl">

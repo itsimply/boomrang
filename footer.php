@@ -18,7 +18,7 @@
 			<div class="row">
 				<div class="col-12 col-md-4">
             <div class="pr-lg-5">
-              <h1 class="heading h6 text-uppercase font-weight-700 mb-3"><strong>Boomerang</strong> UI Kit</h1>
+              <h1 class="heading h6 text-uppercase font-weight-700 mb-3"><strong>Boomerang</strong> Wordpress Theme</h1>
               <p>Boomerang is a high quality UI Kit built on top of the well known Bootstrap 4 Framework. This theme was designed as its own extended version of Bootstrap with multiple functionalities and controls added, extended color palette and beautiful typography.</p>
             </div>
           	</div>

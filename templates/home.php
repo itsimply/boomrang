@@ -39,7 +39,7 @@ get_header(); ?>
               </div>
               <div class="col-lg-5">
                 <div class="position-relative">
-                  <img src="<?php echo get_template_directory_uri(); ?> /images/slider/iphone.png" class="img-center img-fluid rounded">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/slider/iphone.png" class="img-center img-fluid rounded">
                 </div>
               </div>
             </div>

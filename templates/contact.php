@@ -210,12 +210,12 @@ get_header('blue'); ?>
                 Claflin Terrace, 305458
               </h3>
               <p class="lead mt-4 mb-4">
-                E: <a href="#">support@webpixels.io</a>
+                E: <a href="#">Email</a>
                 <br>
-                T: 0755.222.333
+                T: Phone
               </p>
               <p class="">
-                Probably the most complete UI kit out there. Multiple functionalities and controls added,  extended color palette and beautiful typography, designed as its own extended version of Bootstrap at  the highest level of quality.                             
+                 Multiple functionalities and controls added,  extended color palette and beautiful typography, designed as its own extended version of Bootstrap at  the highest level of quality.                             
               </p>
             </div> <!--  .col-lg-5 -->  
 

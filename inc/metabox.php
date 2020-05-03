@@ -16,7 +16,7 @@ function cmb2_boomrang_metaboxes() {
 		'id'            => 'test_metabox',
 		'title'         => __( 'Test Metabox', 'boomrang' ),
 		'object_types'  => array( 'page', ), // Post type
-		'show_on'       => array( 'key' => 'page-template', 'value' => 'templates/about.php' ),
+		'show_on'       => array( 'key' => 'page-template', 'value' => array('templates/component.php', 'templates/about.php') ),
 		'context'       => 'normal',
 		'priority'      => 'high',
 		'show_names'    => true, // Show field names on the left

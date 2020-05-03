@@ -10764,6 +10764,55 @@ ol.comment-list {
     font-size: .7rem;
     padding: .3rem .45rem; } }
 
+.page-title {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef; }
+
+.page-title .heading {
+  margin: 0;
+  padding: 0;
+  color: #212529; }
+
+.page-title .heading a {
+  color: #212529; }
+
+@media (min-height: 600px) and (min-width: 767px) {
+  .background-image-holder[data-holder-type="hero"] {
+    height: 80vh; } }
+
+.background-image-holder .holder-item {
+  height: 100%;
+  padding: 2rem 0; }
+
+@media (max-width: 991px) {
+  .background-image-holder .holder-item {
+    height: auto;
+    padding: 4rem 0; } }
+
+.background-image-holder .swiper-container,
+.background-image-holder .container {
+  position: relative;
+  height: 100%; }
+
+.background-image-holder .swiper-container .swiper-slide .animated {
+  opacity: 0; }
+
+.background-image-holder .swiper-container .swiper-slide .animated.animation-ended {
+  opacity: 1; }
+
+.bg-cover {
+  position: relative; }
+
+.bg-size--cover {
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.bg-size--contain {
+  background-size: contain;
+  background-repeat: no-repeat; }
+
 /*--------------------------------------------------------------
 ## Widgets
 --------------------------------------------------------------*/
