@@ -7,7 +7,7 @@
   "devDependencies": {
     "bootstrap": "^4.0.0",
     "browser-sync": "^2.23.5",
-    "critical": "^0.8.4",
+    "critical": "^7.2.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^2.2.0",
     "gulp-group-css-media-queries": "^1.2.2",
