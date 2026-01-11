@@ -6,8 +6,8 @@
   "author": "Lukasz Fedor",
   "devDependencies": {
     "bootstrap": "^4.0.0",
-    "browser-sync": "^2.23.5",
-    "critical": "^0.8.4",
+    "browser-sync": "^2.29.3",
+    "critical": "^7.2.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^2.2.0",
     "gulp-group-css-media-queries": "^1.2.2",
@@ -17,7 +17,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.0.0",
+    "gulp-sass": "^6.0.1",
     "gulp-uglify": "^1.2.0",
     "gulp-watch": "^4.2.4",
     "gulp-zip": "^3.2.0",
@@ -31,8 +31,8 @@
     "imagemin-jpeg-recompress": "^5.1.0",
     "imagemin-jpegoptim": "^5.2.0",
     "imagemin-optipng": "^5.2.1",
-    "ngrok": "^3.0.1",
-    "psi": "^3.1.0",
+    "ngrok": "^5.0.0-beta.2",
+    "psi": "^4.1.0",
     "purify-css": "^1.2.5"
   }
 }
